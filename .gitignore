@@ -1,0 +1,8 @@
+.well-known
+cgi-bin
+dinamo
+.ftpquota
+error_log
+vendor/
+LICENSE
+error_log
