@@ -59,6 +59,15 @@
             transition: .1s filter;
             filter: blur(10px) grayscale(90%)
         }
+         /* Estilo personalizado para el footer */
+    .footer-alert {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+    }
+       
     </style>
     <style>
         #cover-spin {
@@ -109,10 +118,14 @@
             -webkit-animation: spin .5s both infinite;
             animation: spin .8 linear infinite
         }
-    </style><?php Session::init(); ?><?php if (Session::get('loggedIn') == true) : ?><div id="cover-spin"></div>
+    </style>
+     
+    <?php Session::init(); ?><?php if (Session::get('loggedIn') == true) : ?><div id="cover-spin"></div>
 
     <body class="card-no-border fix-header fix-sidebar" id="card1">
+
         <div id="main-wrapper">
+            
             <header class="topbar" style="width:100%!important">
                 <nav class="navbar navbar-expand-md navbar-light top-navbar">
                     <div class="navbar-header"><?php if (Session::get('rol') == 5) { ?><a href="javascript:void(0)" class="navbar-brand"><?php } else { ?><a href="<?php echo URL; ?>tablero" class="navbar-brand"><?php } ?><b><img src="<?php echo URL; ?>public/images/logo_prev1.png" width="50%" style="margin-top:-5px"></b></a></div>
@@ -196,4 +209,10 @@
                 <div class="sidebar-footer"><a href="<?php echo URL; ?>tablero/logout" class="link" data-toggle="tooltip" title="Salir"><i class="mdi mdi-power"></i></a></div>
             </aside>
             <div class="page-wrapper">
-                <div class="container-fluid"><?php endif; ?>
+                <div class="container-fluid">
+               
+                
+                <?php endif; ?>
+
+               
+                
